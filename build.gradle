@@ -36,6 +36,9 @@ idea {
 def getDisabledFolder(project) {
     Set<String> set = new HashSet<>();
 
+    if (!include_butchery.toBoolean()) {
+        set += 'butchery'
+    }
     if (!include_biomes_o_plenty.toBoolean()) {
         set += 'bop'
     }

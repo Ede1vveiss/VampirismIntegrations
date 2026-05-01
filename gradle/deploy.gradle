@@ -124,6 +124,9 @@ publishMods {
 
 
         optional("choicetheorems-overhauled-village")
+        if (project.include_butchery.toBoolean()) {
+            optional( 'butchery')
+        }
         if (project.include_biomes_o_plenty.toBoolean()) {
             optional( 'biomes-o-plenty')
         }

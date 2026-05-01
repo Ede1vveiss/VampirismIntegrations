@@ -90,6 +90,11 @@ dependencies {
     // Maven - https://maven.maxanier.de/releases/de/teamlapen/vampirism/Vampirism
     implementation "de.teamlapen.vampirism:Vampirism:${project.vampirism_mcversion}-${project.vampirism_version}"
 
+    // Butchery - https://www.curseforge.com/minecraft/mc-mods/butchery
+    if (include_butchery.toBoolean()) {
+        implementation "curse.maven:butchery-973620:${butchery_version}"
+    }
+
     // Biomes O' Plenty - https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty
     if (include_biomes_o_plenty.toBoolean()) {
         implementation "curse.maven:BiomesOPlenty-220318:${project.bop_version}"
